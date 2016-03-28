@@ -35,7 +35,8 @@
     "najax": "^0.4.0",
     "rsvp": "^3.0.16",
     "simple-dom": "^0.3.0",
-    "source-map-support": "^0.4.0"
+    "source-map-support": "^0.4.0",
+    "express-serve-static-gzip": "hone/express-serve-static-gzip"
   },
   "devDependencies": {
     "chai": "^3.5.0",

@@ -8,6 +8,7 @@ var FastBootServer = require('../lib/server');
 var express = require('express');
 var cluster = require('express-cluster');
 var parseArgs = require('minimist');
+var staticGzip = require('express-serve-static-gzip');
 
 var argOptions = {
   default: { port: 3000, host: '::' }
@@ -42,6 +43,7 @@ server.app.buildApp().then(function() {
 
     if (assetPath) {
       app.get('/', server.middleware());
+      app.use(staticGzip(assetPath));
       app.use(express.static(assetPath));
     }
 
